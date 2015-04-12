@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="Date-Revision-yyyymmdd" content="20150412" />
     <meta http-equiv="Content-Language" content="en" />
-    <title>Java Dojo - Advanced Version &#x2013; Task</title>
+    <title>Java Dojo - Advanced Version &#x2013; Source Repository</title>
     <link rel="stylesheet" href="./css/apache-maven-fluido-1.3.1.min.css" />
     <link rel="stylesheet" href="./css/site.css" />
     <link rel="stylesheet" href="./css/print.css" media="print" />
@@ -65,18 +65,27 @@
                 <ul class="nav nav-list">
                     <li class="nav-header">Advanced Version</li>
                               
-      <li class="active">
+      <li>
   
-            <a href="#"><i class="none"></i>Task</a>
-          </li>
+                          <a href="index.html" title="Task">
+          <i class="none"></i>
+        Task</a>
+            </li>
                               <li class="nav-header">Project Documentation</li>
-                                                                                
+                                                                                          
       <li>
   
                           <a href="project-info.html" title="Project Information">
-          <i class="icon-chevron-right"></i>
+          <i class="icon-chevron-down"></i>
         Project Information</a>
-                  </li>
+                    <ul class="nav nav-list">
+                    
+      <li class="active">
+  
+            <a href="#"><i class="none"></i>Source Repository</a>
+          </li>
+              </ul>
+        </li>
                                                                   
       <li>
   
@@ -105,62 +114,22 @@
                 
         <div id="bodyColumn"  class="span9" >
                                   
-            <h1>Task</h1>
-<p>Your task is to implement the missing methods in the class <tt>Version</tt> (also note that there may be some methods needed that have no definition now).</p>
-<p>This exercise is an advanced version of the exercise <a class="externalLink" href="https://java-dojo.github.io/version/" title="Java Dojo - Version">Version</a>.</p>
-<h1>Specification</h1>
-<p>The class <tt>Version</tt> represents a version. A version has the format <tt>X{.Y}[-qualifier]</tt>. The part <tt>.Y</tt> can be repeated multiple times (for this exercise at least 4 times).</p>
-<p>Each part (<tt>X</tt>, <tt>Y</tt>) is a <a class="externalLink" href="https://en.wikipedia.org/wiki/Natural_number" title="Wikipedia - Natural number">natural number</a>. The <tt>qualifier</tt> consists of alphanumeric characters.</p>
-<p>The first part (<tt>X</tt>) is mandatory.</p>
-<p>The second (and further) part(s) (<tt>Y</tt>) can be omitted if it is <tt>0</tt> and all further parts are also omitted.</p>
-<p>The <tt>toString()</tt> method must return a <tt>String</tt> that can be parsed again and represents the same version as parsed (the <tt>equals()</tt> method must return <tt>true</tt> and the <tt>compareTo()</tt> method must return <tt>0</tt>).</p>
-<p>Two versions are considered equal if all parts are the equal (missing parts are considered as <tt>0</tt>).</p>
-<p>When comparing two versions the parts are compared in order. If a part differs then an according result must be returned by <tt>compareTo()</tt>.</p>
-<p>If the version has a <tt>qualifier</tt> then the qualifiers are compared as alphanumeric characters except the special string literal <tt>SNAPSHOT</tt> which is always less than every other <tt>qualifier</tt>. If a version without a <tt>qualifier</tt> is compared to a version with <tt>qualifier</tt> then the version without qualifier is treated as the greater version. All qualifiers (except <tt>SNAPSHOT</tt>) must be case insensitive.</p>
-<p>If the method <tt>parse</tt> cannot handle the supplied <tt>String</tt> the an <tt>IllegalArgumentException</tt> must be thrown.</p>
-<h1>Examples</h1>
-<p>Some examples of comparisons of two versions:</p>
-
-<ul>
-  
-<li><tt>1 == 1.0</tt></li>
-  
-<li><tt>1 == 1.0.0</tt></li>
-  
-<li><tt>1.0.0 &lt; 1.0.1</tt></li>
-  
-<li><tt>1.0.1 &lt; 1.0.1.1</tt></li>
-  
-<li><tt>1.0.0 &lt; 1.1</tt></li>
-  
-<li><tt>1.0 &lt; 2.0</tt></li>
-  
-<li><tt>1.2 &lt; 2.0</tt></li>
-  
-<li><tt>1.0-SNAPSHOT &lt; 1.0-alpha</tt></li>
-  
-<li><tt>1.0-ALPHA == 1.0.0-alpha</tt></li>
-  
-<li><tt>1.0-alpha &lt; 1.0-beta</tt></li>
-  
-<li><tt>1.0-beta &lt; 1.0-rc</tt></li>
-  
-<li><tt>1.0-rc &lt; 1.0-snapshot</tt></li>
-  
-<li><tt>1.0-rc &lt; 1.0</tt></li>
-  
-<li><tt>1.1 &lt; 1.2-SNAPSHOT</tt></li>
-</ul>
-<h1>Support</h1>
-<p>To support you with implementing the methods there are unit tests in <tt>VersionTest</tt>. The unit tests are disabled at the start. To use them you have to enable them.</p>
-<h1>Development Requirements</h1>
-<p>To perform this exercise you need a JDK 8 and Maven 3.3.x.</p>
-<h1>References</h1>
-
-<ul>
-  
-<li><a class="externalLink" href="https://en.wikipedia.org/wiki/Natural_number" title="Wikipedia - Natural number">Wikipedia - Natural number</a></li>
-</ul>
+            <div class="section">
+<h2><a name="Overview"></a>Overview</h2><a name="Overview"></a>
+<p>This project uses <a class="externalLink" href="http://git-scm.com/">Git</a> to manage its source code. Instructions on Git use can be found at <a class="externalLink" href="http://git-scm.com/documentation">http://git-scm.com/documentation</a>.</p></div>
+<div class="section">
+<h2><a name="Web_Browser_Access"></a>Web Browser Access</h2><a name="Web_Browser_Access"></a>
+<p>The following is a link to a browsable version of the source repository:</p>
+<div class="source">
+<pre><a class="externalLink" href="https://github.com/java-dojo/advanced-version">https://github.com/java-dojo/advanced-version</a></pre></div></div>
+<div class="section">
+<h2><a name="Developer_Access"></a>Developer Access</h2><a name="Developer_Access"></a>
+<p>Only project developers can access the Git tree via this method (See <a class="externalLink" href="http://git-scm.com/docs/git-clone">http://git-scm.com/docs/git-clone</a>).</p>
+<div class="source">
+<pre>$ git clone ssh://git@github.com/java-dojo/advanced-version.git</pre></div></div>
+<div class="section">
+<h2><a name="Access_from_Behind_a_Firewall"></a>Access from Behind a Firewall</h2><a name="Access_from_Behind_a_Firewall"></a>
+<p>Refer to the documentation of the SCM used for more information about access behind a firewall.</p></div>
                   </div>
             </div>
           </div>

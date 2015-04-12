@@ -1,0 +1,76 @@
+# Task
+
+Your task is to implement the missing methods in the class `Version` (also note
+that there may be some methods needed that have no definition now).
+
+This exercise is an advanced version of the exercise [Version][ver].
+
+# Specification
+
+The class `Version` represents a version. A version has the format
+`X{.Y}[-qualifier]`. The part `.Y` can be repeated multiple times (for this
+exercise at least 4 times).
+
+Each part (`X`, `Y`) is a [natural number][wpnn]. The `qualifier` consists of
+alphanumeric characters.
+
+The first part (`X`) is mandatory.
+
+The second (and further) part(s) (`Y`) can be omitted if it is `0` and all
+further parts are also omitted.
+
+The `toString()` method must return a `String` that can be parsed again and
+represents the same version as parsed (the `equals()` method must return `true`
+and the `compareTo()` method must return `0`).
+
+Two versions are considered equal if all parts are the equal (missing parts are
+considered as `0`).
+
+When comparing two versions the parts are compared in order. If a part differs
+then an according result must be returned by `compareTo()`.
+
+If the version has a `qualifier` then the qualifiers are compared as
+alphanumeric characters except the special string literal `SNAPSHOT` which is
+always less than every other `qualifier`. If a version without a `qualifier` is
+compared to a version with `qualifier` then the version without qualifier is
+treated as the greater version. All qualifiers (except `SNAPSHOT`) must be case
+insensitive.
+
+If the method `parse` cannot handle the supplied `String` the an
+`IllegalArgumentException` must be thrown.
+
+# Examples
+
+Some examples of comparisons of two versions:
+
+* `1 == 1.0`
+* `1 == 1.0.0`
+* `1.0.0 < 1.0.1`
+* `1.0.1 < 1.0.1.1`
+* `1.0.0 < 1.1`
+* `1.0 < 2.0`
+* `1.2 < 2.0`
+* `1.0-SNAPSHOT < 1.0-alpha`
+* `1.0-ALPHA == 1.0.0-alpha`
+* `1.0-alpha < 1.0-beta`
+* `1.0-beta < 1.0-rc`
+* `1.0-rc < 1.0-snapshot`
+* `1.0-rc < 1.0`
+* `1.1 < 1.2-SNAPSHOT`
+
+# Support
+
+To support you with implementing the methods there are unit tests in
+`VersionTest`. The unit tests are disabled at the start. To use them you have to
+enable them.
+
+# Development Requirements
+
+  To perform this exercise you need a JDK 8 and Maven 3.3.x.
+
+# References
+
+* [Wikipedia - Natural number][wpnn]
+
+[ver ]: https://java-dojo.github.io/version/ "Java Dojo - Version"
+[wpnn]: https://en.wikipedia.org/wiki/Natural_number "Wikipedia - Natural number"

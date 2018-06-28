@@ -1,3 +1,4 @@
-# Advanced Version
+# #movetogitlab
 
-The documentation is found on the [project page](https://java-dojo.github.io/advanced-version/).
+This repository is moved to https://git.sw4j.net/java-dojo/advanced-version with a mirror at
+https://gitlab.com/java-dojo/advanced-version
